@@ -103,6 +103,7 @@ const Hero = () => {
                 <div 
                   ref={videoContainerRef}
                   className="aspect-video w-full bg-black rounded-xl overflow-hidden"
+                  style={{ minHeight: "400px" }} // Increased minimum height
                 >
                   {/* YouTube iframe will be injected here */}
                   <div className="w-full h-full flex items-center justify-center">
@@ -115,7 +116,7 @@ const Hero = () => {
         </div>
 
         {/* Featured Image */}
-        <div className="mt-20 max-w-3xl mx-auto">
+        <div className="mt-20 max-w-4xl mx-auto"> {/* Increased max-width from 3xl to 4xl */}
           <div className="glass-panel p-2 overflow-hidden">
             <img 
               src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-digital-advertisement-for-music-melodi_LBv7r.png/:/cr=t:5.43%25,l:0%25,w:100%25,h:89.13%25/rs=w:600,h:300,cg:true/qt=q:33" 
