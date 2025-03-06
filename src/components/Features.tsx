@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FileMusic, MusicNote, Mic, FileCheck, BookOpen, Headphones, Settings, Download } from 'lucide-react';
+import { FileMusic, Music, Mic, FileCheck, BookOpen, Headphones, Settings, Download } from 'lucide-react';
 
 const featureItems = [
   {
@@ -9,7 +9,7 @@ const featureItems = [
     description: "Find complete lyrics for any song by any artist, sourced from the web with perfect accuracy."
   },
   {
-    icon: <MusicNote size={24} />,
+    icon: <Music size={24} />,
     title: "Guitar Tabs",
     description: "Get detailed guitar tablature and notation for your favorite songs, precisely formatted for easy playing."
   },

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Music, MusicNote, Play } from 'lucide-react';
+import { Music, Play } from 'lucide-react';
 
 const Hero = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
@@ -39,13 +39,13 @@ const Hero = () => {
       
       {/* Floating music notes */}
       <div className="absolute top-1/3 left-10 text-cyberpunk-primary/30 animate-float">
-        <MusicNote size={30} />
+        <Music size={30} />
       </div>
       <div className="absolute top-2/3 right-10 text-cyberpunk-secondary/30 animate-float" style={{ animationDelay: '1.5s' }}>
-        <MusicNote size={40} />
+        <Music size={40} />
       </div>
       <div className="absolute top-1/2 left-1/4 text-cyberpunk-accent/30 animate-float" style={{ animationDelay: '0.8s' }}>
-        <MusicNote size={24} />
+        <Music size={24} />
       </div>
 
       <div className="container mx-auto px-4">
