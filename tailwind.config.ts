@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Cyberpunk theme colors
+				cyberpunk: {
+					background: '#0f1119',
+					foreground: '#e0e0ff',
+					primary: '#6644ff',
+					secondary: '#ff44aa',
+					accent: '#44ddff',
+					muted: '#1a1b2e',
+					border: '#323456'
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,64 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						opacity: '1',
+						filter: 'brightness(1) blur(0px)'
+					},
+					'50%': { 
+						opacity: '0.8',
+						filter: 'brightness(1.2) blur(3px)'
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'waveform': {
+					'0%': { height: '20%' },
+					'25%': { height: '90%' },
+					'50%': { height: '40%' },
+					'75%': { height: '60%' },
+					'100%': { height: '20%' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-500px 0' },
+					'100%': { backgroundPosition: '500px 0' }
+				},
+				'rotate-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 3s infinite ease-in-out',
+				'float': 'float 6s infinite ease-in-out',
+				'waveform-1': 'waveform 1.5s infinite ease-in-out',
+				'waveform-2': 'waveform 1.7s infinite ease-in-out 0.1s',
+				'waveform-3': 'waveform 1.9s infinite ease-in-out 0.2s',
+				'waveform-4': 'waveform 2.1s infinite ease-in-out 0.3s',
+				'shimmer': 'shimmer 3s infinite linear',
+				'rotate-slow': 'rotate-slow 12s infinite linear'
+			},
+			backgroundImage: {
+				'cyberpunk-gradient': 'linear-gradient(135deg, #6644ff 0%, #ff44aa 100%)',
+				'shimmer-gradient': 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%)',
+				'neon-glow': 'linear-gradient(180deg, rgba(102, 68, 255, 0.3) 0%, rgba(102, 68, 255, 0) 100%)',
+				'glass-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)'
+			},
+			boxShadow: {
+				'neon-purple': '0 0 5px 2px rgba(102, 68, 255, 0.7)',
+				'neon-pink': '0 0 5px 2px rgba(255, 68, 170, 0.7)',
+				'neon-blue': '0 0 5px 2px rgba(68, 221, 255, 0.7)'
+			},
+			dropShadow: {
+				'neon-purple': '0 0 5px rgba(102, 68, 255, 0.7)',
+				'neon-pink': '0 0 5px rgba(255, 68, 170, 0.7)',
+				'neon-blue': '0 0 5px rgba(68, 221, 255, 0.7)'
 			}
 		}
 	},
