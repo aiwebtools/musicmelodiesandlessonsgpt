@@ -31,8 +31,17 @@ const Hero = () => {
     };
   }, []);
 
+  // Smooth scroll function for Learn More button
+  const handleLearnMoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const featuresSection = document.getElementById('features');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
+    <section className="relative pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-cyberpunk-primary/20 filter blur-3xl animate-pulse-glow"></div>
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-cyberpunk-secondary/20 filter blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
@@ -49,9 +58,9 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-10">
+        <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-10">
           <div className="lg:w-1/2 text-center lg:text-left">
-            <div className="inline-block px-4 py-1 mb-6 rounded-full bg-cyberpunk-muted border border-cyberpunk-border">
+            <div className="inline-block px-4 py-1 mb-4 md:mb-6 rounded-full bg-cyberpunk-muted border border-cyberpunk-border">
               <div className="flex items-center gap-2">
                 <div className="flex space-x-0.5 h-4">
                   <div className="waveform-bar h-full animate-waveform-1"></div>
@@ -63,12 +72,12 @@ const Hero = () => {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6">
               <span className="block">Welcome to the Future of</span>
               <span className="neon-text bg-clip-text text-transparent bg-cyberpunk-gradient animate-pulse-glow">Self Music Mastery</span>
             </h1>
             
-            <p className="text-lg mb-8 text-gray-300">
+            <p className="text-base md:text-lg mb-6 md:mb-8 text-gray-300">
               Your AI music companion for finding lyrics, guitar tabs, personalized lessons, 
               and vocal coaching - all in one intelligent tool.
             </p>
@@ -88,7 +97,9 @@ const Hero = () => {
               
               <a 
                 href="#features" 
+                onClick={handleLearnMoreClick}
                 className="px-6 py-3 rounded-md font-bold border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center gap-2"
+                aria-label="Learn more about our features"
               >
                 <Play size={16} />
                 Learn More
@@ -96,14 +107,14 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 w-full mt-8 lg:mt-0">
             <div className="relative">
               {/* Neon border effect */}
               <div className="neon-border">
                 <div 
                   ref={videoContainerRef}
                   className="aspect-video w-full bg-black rounded-xl overflow-hidden"
-                  style={{ minHeight: "400px" }} // Increased minimum height
+                  style={{ minHeight: "280px", height: "100%", maxHeight: "500px" }} // Responsive height adjustments
                 >
                   {/* YouTube iframe will be injected here */}
                   <div className="w-full h-full flex items-center justify-center">
@@ -116,7 +127,7 @@ const Hero = () => {
         </div>
 
         {/* Featured Image */}
-        <div className="mt-20 max-w-4xl mx-auto"> {/* Increased max-width from 3xl to 4xl */}
+        <div className="mt-12 md:mt-20 max-w-full md:max-w-4xl mx-auto">
           <div className="glass-panel p-2 overflow-hidden">
             <img 
               src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-digital-advertisement-for-music-melodi_LBv7r.png/:/cr=t:5.43%25,l:0%25,w:100%25,h:89.13%25/rs=w:600,h:300,cg:true/qt=q:33" 

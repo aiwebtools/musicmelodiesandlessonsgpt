@@ -10,32 +10,39 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   useEffect(() => {
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const href = this.getAttribute('href');
-        if (!href) return;
-        
-        const targetElement = document.querySelector(href);
-        if (!targetElement) return;
+    // Enhanced smooth scroll for anchor links
+    const handleSmoothScroll = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a[href^="#"]');
+      
+      if (!anchor) return;
+      
+      e.preventDefault();
+      
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+      
+      const targetElement = document.querySelector(href);
+      if (!targetElement) return;
 
-        window.scrollTo({
-          top: targetElement.getBoundingClientRect().top + window.pageYOffset - 100,
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    return () => {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.removeEventListener('click', function () {});
+      // Improved scroll with offset to account for fixed header
+      const headerOffset = window.innerWidth <= 768 ? 80 : 100;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
       });
     };
-  }, []);
 
-  console.log("Index page rendering"); // Debugging log
+    // Add event listener directly to the document
+    document.addEventListener('click', handleSmoothScroll);
+
+    return () => {
+      document.removeEventListener('click', handleSmoothScroll);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen w-full bg-cyberpunk-background text-cyberpunk-foreground overflow-x-hidden">
