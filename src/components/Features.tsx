@@ -46,14 +46,16 @@ const featureItems = [
 ];
 
 const Features = () => {
+  console.log("Features component rendering"); // Debugging log
+  
   return (
-    <section id="features" className="py-20 relative overflow-hidden">
+    <section id="features" className="py-20 relative overflow-hidden bg-cyberpunk-background">
       {/* Background glow effects */}
       <div className="absolute -top-40 -left-40 w-80 h-80 bg-cyberpunk-primary/10 rounded-full filter blur-3xl"></div>
       <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-cyberpunk-secondary/10 rounded-full filter blur-3xl"></div>
 
       <div className="container mx-auto px-4">
-        <h2 className="section-heading">
+        <h2 className="section-heading text-white">
           How <span className="text-cyberpunk-primary">Music Melodies</span> Works
         </h2>
         
@@ -66,7 +68,7 @@ const Features = () => {
               <div className="bg-gradient-to-br from-cyberpunk-muted to-cyberpunk-muted/20 p-3 rounded-lg inline-block mb-4 text-cyberpunk-accent group-hover:text-cyberpunk-secondary transition-colors duration-300">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-cyberpunk-primary transition-colors duration-300">
+              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyberpunk-primary transition-colors duration-300">
                 {feature.title}
               </h3>
               <p className="text-gray-400 leading-relaxed">
@@ -80,7 +82,7 @@ const Features = () => {
           <div className="glass-panel p-8 relative">
             <div className="absolute -inset-0.5 bg-cyberpunk-gradient rounded-xl opacity-30 blur-sm"></div>
             <div className="relative">
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-2xl font-bold mb-4 text-white">
                 Powered by Advanced AI Technology
               </h3>
               <p className="text-gray-300 mb-6">

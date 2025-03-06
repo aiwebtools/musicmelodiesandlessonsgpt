@@ -35,6 +35,8 @@ const Index = () => {
     };
   }, []);
 
+  console.log("Index page rendering"); // Debugging log
+
   return (
     <div className="min-h-screen w-full bg-cyberpunk-background text-cyberpunk-foreground overflow-x-hidden">
       <Header />
