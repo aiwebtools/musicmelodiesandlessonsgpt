@@ -47,7 +47,7 @@ const Header = () => {
             Music Melodies and Lessons GPT
           </a>
           <a 
-            href="https://www.suno.ai" 
+            href="https://suno.com/invite/@aiwebtools" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-sm font-medium text-white hover:text-cyberpunk-secondary transition"
@@ -99,7 +99,7 @@ const Header = () => {
               Music Melodies and Lessons GPT
             </a>
             <a 
-              href="https://www.suno.ai" 
+              href="https://suno.com/invite/@aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-sm font-medium py-2 text-white hover:text-cyberpunk-secondary transition"
