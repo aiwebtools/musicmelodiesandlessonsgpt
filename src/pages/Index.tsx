@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -7,9 +7,18 @@ import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Disclaimer from '@/components/Disclaimer';
 import Footer from '@/components/Footer';
+import DisclaimerPopup from '@/components/DisclaimerPopup';
 
 const Index = () => {
+  const [showDisclaimerPopup, setShowDisclaimerPopup] = useState(false);
+
   useEffect(() => {
+    // Show disclaimer popup if user hasn't seen it yet
+    const hasAgreedToDisclaimer = localStorage.getItem('agreedToDisclaimer') === 'true';
+    if (!hasAgreedToDisclaimer) {
+      setShowDisclaimerPopup(true);
+    }
+
     // Enhanced smooth scroll for anchor links
     const handleSmoothScroll = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -44,6 +53,11 @@ const Index = () => {
     };
   }, []);
 
+  const handleDisclaimerClose = () => {
+    setShowDisclaimerPopup(false);
+    localStorage.setItem('agreedToDisclaimer', 'true');
+  };
+
   return (
     <div className="min-h-screen w-full bg-cyberpunk-background text-cyberpunk-foreground overflow-x-hidden">
       <Header />
@@ -55,6 +69,7 @@ const Index = () => {
         <Disclaimer />
       </main>
       <Footer />
+      <DisclaimerPopup isOpen={showDisclaimerPopup} onClose={handleDisclaimerClose} />
     </div>
   );
 };
