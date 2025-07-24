@@ -118,27 +118,6 @@ const Hero = () => {
             />
           </div>
         </div>
-
-        {/* Video section */}
-        <div className="flex justify-center mb-12 md:mb-20">
-          <div className="w-full max-w-md mx-auto">
-            <div className="relative">
-              {/* Neon border effect */}
-              <div className="neon-border">
-                <div 
-                  ref={videoContainerRef}
-                  className="w-full bg-black rounded-xl overflow-hidden relative"
-                  style={{ aspectRatio: "9/16", height: "70vh", maxHeight: "700px", minHeight: "500px" }}
-                >
-                  {/* YouTube iframe will be injected here */}
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="animate-spin h-8 w-8 border-4 border-cyberpunk-primary border-t-transparent rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
