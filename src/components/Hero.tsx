@@ -109,8 +109,8 @@ const Hero = () => {
               <div className="neon-border">
                 <div 
                   ref={videoContainerRef}
-                  className="aspect-video w-full bg-black rounded-xl overflow-hidden"
-                  style={{ minHeight: "280px", height: "100%", maxHeight: "500px" }} // Responsive height adjustments
+                  className="w-full bg-black rounded-xl overflow-hidden"
+                  style={{ aspectRatio: "9/16", minHeight: "400px", maxHeight: "600px" }}
                 >
                   {/* YouTube iframe will be injected here */}
                   <div className="w-full h-full flex items-center justify-center">
