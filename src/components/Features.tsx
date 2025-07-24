@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { FileMusic, Music, Mic, FileCheck, BookOpen, Headphones, Settings, Download } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const featureItems = [
   {
@@ -46,7 +47,8 @@ const featureItems = [
 ];
 
 const Features = () => {
-  console.log("Features component rendering"); // Debugging log
+  const { ref: titleRef, isVisible: titleVisible } = useScrollReveal();
+  const { ref: gridRef, isVisible: gridVisible } = useScrollReveal({ threshold: 0.2 });
   
   return (
     <section id="features" className="py-20 relative overflow-hidden bg-cyberpunk-background">
@@ -55,15 +57,22 @@ const Features = () => {
       <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-cyberpunk-secondary/10 rounded-full filter blur-3xl"></div>
 
       <div className="container mx-auto px-4">
-        <h2 className="section-heading text-white">
+        <h2 
+          ref={titleRef as React.RefObject<HTMLHeadingElement>}
+          className={`section-heading text-white scroll-reveal ${titleVisible ? 'revealed' : ''}`}
+        >
           How <span className="text-cyberpunk-primary">Music Melodies</span> Works
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        <div 
+          ref={gridRef as React.RefObject<HTMLDivElement>}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 scroll-reveal ${gridVisible ? 'revealed' : ''}`}
+        >
           {featureItems.map((feature, index) => (
             <div 
               key={index} 
-              className="cyberpunk-card p-6 group"
+              className={`cyberpunk-card p-6 group scroll-reveal-scale ${gridVisible ? 'revealed' : ''}`}
+              style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className="bg-gradient-to-br from-cyberpunk-muted to-cyberpunk-muted/20 p-3 rounded-lg inline-block mb-4 text-cyberpunk-accent group-hover:text-cyberpunk-secondary transition-colors duration-300">
                 {feature.icon}

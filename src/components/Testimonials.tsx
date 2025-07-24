@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Star } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const testimonials = [
   {
@@ -34,18 +35,29 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const { ref: titleRef, isVisible: titleVisible } = useScrollReveal();
+  const { ref: gridRef, isVisible: gridVisible } = useScrollReveal({ threshold: 0.2 });
+  const { ref: ctaRef, isVisible: ctaVisible } = useScrollReveal();
+
   return (
     <section className="py-20 bg-cyberpunk-muted/30">
       <div className="container mx-auto px-4">
-        <h2 className="section-heading">
+        <h2 
+          ref={titleRef as React.RefObject<HTMLHeadingElement>}
+          className={`section-heading scroll-reveal ${titleVisible ? 'revealed' : ''}`}
+        >
           What Musicians Are <span className="text-cyberpunk-secondary">Saying</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        <div 
+          ref={gridRef as React.RefObject<HTMLDivElement>}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 scroll-reveal ${gridVisible ? 'revealed' : ''}`}
+        >
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="cyberpunk-card p-6 h-full flex flex-col"
+              className={`cyberpunk-card p-6 h-full flex flex-col scroll-reveal-scale ${gridVisible ? 'revealed' : ''}`}
+              style={{ transitionDelay: `${index * 0.15}s` }}
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-cyberpunk-primary/50">
@@ -75,7 +87,10 @@ const Testimonials = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
+        <div 
+          ref={ctaRef as React.RefObject<HTMLDivElement>}
+          className={`mt-16 text-center scroll-reveal ${ctaVisible ? 'revealed' : ''}`}
+        >
           <div className="inline-block px-4 py-1 rounded-full bg-cyberpunk-accent/20 text-cyberpunk-accent text-sm font-medium mb-6 border border-cyberpunk-accent/30">
             Join thousands of satisfied musicians
           </div>

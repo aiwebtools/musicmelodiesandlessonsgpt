@@ -8,6 +8,7 @@ import FAQ from '@/components/FAQ';
 import Disclaimer from '@/components/Disclaimer';
 import Footer from '@/components/Footer';
 import DisclaimerPopup from '@/components/DisclaimerPopup';
+import ShootingStars from '@/components/ShootingStars';
 
 const Index = () => {
   const [showDisclaimerPopup, setShowDisclaimerPopup] = useState(false);
@@ -59,7 +60,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-cyberpunk-background text-cyberpunk-foreground overflow-x-hidden">
+    <div className="min-h-screen w-full bg-cyberpunk-background text-cyberpunk-foreground overflow-x-hidden relative">
+      <ShootingStars />
       <Header />
       <main>
         <Hero />

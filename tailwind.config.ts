@@ -128,6 +128,40 @@ export default {
 				'rotate-slow': {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' }
+				},
+				'shooting': {
+					'0%': { 
+						opacity: '1',
+						transform: 'translateX(0) translateY(0)',
+					},
+					'70%': { 
+						opacity: '1',
+					},
+					'100%': { 
+						opacity: '0',
+						transform: 'translateX(-500px) translateY(300px)',
+					}
+				},
+				'shooting-tail': {
+					'0%': { 
+						width: '0',
+					},
+					'30%': { 
+						width: '100px',
+					},
+					'100%': { 
+						width: '0',
+					}
+				},
+				'twinkle': {
+					'0%, 100%': { 
+						opacity: '0.3',
+						transform: 'scale(1)',
+					},
+					'50%': { 
+						opacity: '1',
+						transform: 'scale(1.2)',
+					}
 				}
 			},
 			animation: {
@@ -140,7 +174,10 @@ export default {
 				'waveform-3': 'waveform 1.9s infinite ease-in-out 0.2s',
 				'waveform-4': 'waveform 2.1s infinite ease-in-out 0.3s',
 				'shimmer': 'shimmer 3s infinite linear',
-				'rotate-slow': 'rotate-slow 12s infinite linear'
+				'rotate-slow': 'rotate-slow 12s infinite linear',
+				'shooting': 'shooting 3s linear infinite',
+				'shooting-tail': 'shooting-tail 3s linear infinite',
+				'twinkle': 'twinkle 4s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'cyberpunk-gradient': 'linear-gradient(135deg, #6644ff 0%, #ff44aa 100%)',
