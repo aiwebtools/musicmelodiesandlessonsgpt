@@ -61,10 +61,15 @@ const Hero = () => {
             <span className="neon-text bg-clip-text text-transparent bg-cyberpunk-gradient">Self Music Mastery</span>
           </h1>
           
-          <p className="text-base md:text-lg mb-6 md:mb-8 text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg mb-4 md:mb-6 text-gray-300 max-w-3xl mx-auto">
             Your AI music companion for finding lyrics, guitar tabs, personalized lessons, 
             and vocal coaching - all in one intelligent tool.
           </p>
+          
+          <div className="flex items-center justify-center gap-2 mb-6 md:mb-8">
+            <span className="text-sm text-gray-400">Powered by</span>
+            <span className="text-cyberpunk-primary font-semibold">ChatGPT</span>
+          </div>
           
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
