@@ -42,9 +42,12 @@ const Header = () => {
             href="https://chatgpt.com/g/g-HbNtkgAdE-music-melodies-and-lessons-gpt" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-sm font-medium text-white hover:text-cyberpunk-primary transition"
+            className="relative group px-4 py-2 rounded-lg font-bold text-sm overflow-hidden transition-all duration-300 border-2 border-cyberpunk-primary/50 bg-cyberpunk-primary/10 hover:border-cyberpunk-primary hover:bg-cyberpunk-primary/20 hover:scale-105"
           >
-            Music Melodies and Lessons GPT
+            <span className="absolute inset-0 bg-gradient-to-r from-cyberpunk-primary/20 to-cyberpunk-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="absolute inset-0 animate-pulse bg-cyberpunk-primary/10"></span>
+            <span className="relative z-10 neon-text">Music Melodies GPT</span>
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyberpunk-primary via-cyberpunk-secondary to-cyberpunk-primary opacity-30 blur-sm group-hover:opacity-60 transition-opacity duration-300 rounded-lg"></div>
           </a>
           <a 
             href="https://suno.com/invite/@aiwebtools" 
@@ -95,10 +98,13 @@ const Header = () => {
               href="https://chatgpt.com/g/g-HbNtkgAdE-music-melodies-and-lessons-gpt" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-sm font-medium py-2 text-white hover:text-cyberpunk-primary transition"
+              className="relative group px-4 py-3 rounded-lg font-bold text-sm overflow-hidden transition-all duration-300 border-2 border-cyberpunk-primary/50 bg-cyberpunk-primary/10 hover:border-cyberpunk-primary hover:bg-cyberpunk-primary/20 hover:scale-105 w-full text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Music Melodies and Lessons GPT
+              <span className="absolute inset-0 bg-gradient-to-r from-cyberpunk-primary/20 to-cyberpunk-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="absolute inset-0 animate-pulse bg-cyberpunk-primary/10"></span>
+              <span className="relative z-10 neon-text">Music Melodies GPT</span>
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyberpunk-primary via-cyberpunk-secondary to-cyberpunk-primary opacity-30 blur-sm group-hover:opacity-60 transition-opacity duration-300 rounded-lg"></div>
             </a>
             <a 
               href="https://suno.com/invite/@aiwebtools" 

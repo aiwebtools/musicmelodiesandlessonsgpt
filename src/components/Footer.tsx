@@ -47,15 +47,18 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
+              <li className="mb-4">
                 <a 
                   href="https://chatgpt.com/g/g-HbNtkgAdE-music-melodies-and-lessons-gpt" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyberpunk-primary transition-colors flex items-center gap-1"
+                  className="relative group inline-block px-4 py-3 rounded-lg font-bold text-sm overflow-hidden transition-all duration-300 border-2 border-cyberpunk-primary/50 bg-cyberpunk-primary/10 hover:border-cyberpunk-primary hover:bg-cyberpunk-primary/20 hover:scale-105"
                 >
-                  Music Melodies and Lessons GPT
-                  <ExternalLink size={12} />
+                  <span className="absolute inset-0 bg-gradient-to-r from-cyberpunk-primary/20 to-cyberpunk-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute inset-0 animate-pulse bg-cyberpunk-primary/10"></span>
+                  <span className="relative z-10 neon-text">Music Melodies GPT</span>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-cyberpunk-primary via-cyberpunk-secondary to-cyberpunk-primary opacity-30 blur-sm group-hover:opacity-60 transition-opacity duration-300 rounded-lg"></div>
+                  <ExternalLink size={12} className="inline ml-2 relative z-10" />
                 </a>
               </li>
               <li>
