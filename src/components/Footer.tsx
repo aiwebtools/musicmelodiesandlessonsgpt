@@ -71,10 +71,13 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="#faq" 
-                  className="text-gray-400 hover:text-cyberpunk-accent transition-colors"
+                  href="https://musicvideomakergpt.lovable.app/?via=aiwebtools" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyberpunk-accent transition-colors flex items-center gap-1"
                 >
-                  FAQ
+                  MUSIC VIDEO MAKER SUITE
+                  <ExternalLink size={12} />
                 </a>
               </li>
               <li>

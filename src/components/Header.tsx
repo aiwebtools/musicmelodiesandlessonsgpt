@@ -55,10 +55,12 @@ const Header = () => {
             SUNO AI MUSIC GENERATOR
           </a>
           <a 
-            href="#faq" 
+            href="https://musicvideomakergpt.lovable.app/?via=aiwebtools" 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="text-sm font-medium text-white hover:text-cyberpunk-accent transition"
           >
-            FAQ
+            MUSIC VIDEO MAKER SUITE
           </a>
           <a 
             href="#disclaimer" 
@@ -108,11 +110,13 @@ const Header = () => {
               SUNO AI MUSIC GENERATOR
             </a>
             <a 
-              href="#faq" 
+              href="https://musicvideomakergpt.lovable.app/?via=aiwebtools" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="text-sm font-medium py-2 text-white hover:text-cyberpunk-accent transition"
               onClick={() => setMobileMenuOpen(false)}
             >
-              FAQ
+              MUSIC VIDEO MAKER SUITE
             </a>
             <a 
               href="#disclaimer" 
