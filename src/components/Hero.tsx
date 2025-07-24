@@ -68,7 +68,7 @@ const Hero = () => {
           
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6">
             <span className="block">Welcome to the Future of</span>
-            <span className="neon-text bg-clip-text text-transparent bg-cyberpunk-gradient animate-pulse-glow">Self Music Mastery</span>
+            <span className="neon-text bg-clip-text text-transparent bg-cyberpunk-gradient">Self Music Mastery</span>
           </h1>
           
           <p className="text-base md:text-lg mb-6 md:mb-8 text-gray-300 max-w-3xl mx-auto">

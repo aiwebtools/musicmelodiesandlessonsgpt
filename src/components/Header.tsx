@@ -26,7 +26,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <a href="/" className="flex items-center gap-2">
-            <AudioWaveform className="h-8 w-8 text-cyberpunk-primary animate-pulse-glow" />
+            <AudioWaveform className="h-8 w-8 text-cyberpunk-primary" />
             <div>
               <h1 className="text-xl font-orbitron font-bold text-white">
                 <span className="neon-text">Music Melodies</span> and <span className="neon-text-pink">Lessons GPT</span>

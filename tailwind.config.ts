@@ -111,8 +111,8 @@ export default {
 					}
 				},
 				'float': {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-10px)' }
+					'0%, 100%': { transform: 'translateY(0) translateX(0)' },
+					'50%': { transform: 'translateY(-5px) translateX(2px)' }
 				},
 				'waveform': {
 					'0%': { height: '20%' },
@@ -133,8 +133,8 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'pulse-glow': 'pulse-glow 3s infinite ease-in-out',
-				'float': 'float 6s infinite ease-in-out',
+				'pulse-glow': 'pulse-glow 4s infinite ease-in-out',
+				'float': 'float 8s infinite ease-in-out',
 				'waveform-1': 'waveform 1.5s infinite ease-in-out',
 				'waveform-2': 'waveform 1.7s infinite ease-in-out 0.1s',
 				'waveform-3': 'waveform 1.9s infinite ease-in-out 0.2s',
