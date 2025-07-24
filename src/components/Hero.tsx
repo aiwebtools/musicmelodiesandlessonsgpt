@@ -105,7 +105,21 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Video section moved down */}
+        {/* Featured Image - moved above video */}
+        <div className="max-w-full md:max-w-4xl mx-auto mb-12 md:mb-20">
+          <div className="glass-panel p-2 overflow-hidden">
+            <img 
+              src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-digital-advertisement-for-music-melodi_LBv7r.png/:/cr=t:5.43%25,l:0%25,w:100%25,h:89.13%25/rs=w:600,h:300,cg:true/qt=q:33" 
+              alt="Music Melodies and Lessons GPT" 
+              className="w-full h-auto rounded-lg object-cover"
+              style={{ 
+                boxShadow: '0 0 20px rgba(102, 68, 255, 0.3)'
+              }}
+            />
+          </div>
+        </div>
+
+        {/* Video section */}
         <div className="flex justify-center mb-12 md:mb-20">
           <div className="w-full max-w-md mx-auto">
             <div className="relative">
@@ -123,20 +137,6 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Featured Image */}
-        <div className="max-w-full md:max-w-4xl mx-auto">
-          <div className="glass-panel p-2 overflow-hidden">
-            <img 
-              src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-digital-advertisement-for-music-melodi_LBv7r.png/:/cr=t:5.43%25,l:0%25,w:100%25,h:89.13%25/rs=w:600,h:300,cg:true/qt=q:33" 
-              alt="Music Melodies and Lessons GPT" 
-              className="w-full h-auto rounded-lg object-cover"
-              style={{ 
-                boxShadow: '0 0 20px rgba(102, 68, 255, 0.3)'
-              }}
-            />
           </div>
         </div>
       </div>
