@@ -74,6 +74,10 @@ export default {
 					border: '#323456'
 				}
 			},
+			fontFamily: {
+				'rajdhani': ['Rajdhani', 'sans-serif'],
+				'orbitron': ['Orbitron', 'monospace'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
