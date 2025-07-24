@@ -40,16 +40,6 @@ const Hero = () => {
       <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-cyberpunk-primary/20 filter blur-3xl animate-pulse-glow"></div>
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-cyberpunk-secondary/20 filter blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
       
-      {/* Floating music notes */}
-      <div className="absolute top-1/3 left-10 text-cyberpunk-primary/30 animate-float">
-        <Music size={30} />
-      </div>
-      <div className="absolute top-2/3 right-10 text-cyberpunk-secondary/30 animate-float" style={{ animationDelay: '1.5s' }}>
-        <Music size={40} />
-      </div>
-      <div className="absolute top-1/2 left-1/4 text-cyberpunk-accent/30 animate-float" style={{ animationDelay: '0.8s' }}>
-        <Music size={24} />
-      </div>
 
       <div className="container mx-auto px-4">
         {/* Main content section */}
@@ -57,10 +47,10 @@ const Hero = () => {
           <div className="inline-block px-4 py-1 mb-4 md:mb-6 rounded-full bg-cyberpunk-muted border border-cyberpunk-border">
             <div className="flex items-center gap-2 justify-center">
               <div className="flex space-x-0.5 h-4">
-                <div className="waveform-bar h-full animate-waveform-1"></div>
-                <div className="waveform-bar h-full animate-waveform-2"></div>
-                <div className="waveform-bar h-full animate-waveform-3"></div>
-                <div className="waveform-bar h-full animate-waveform-4"></div>
+                <div className="waveform-bar h-full"></div>
+                <div className="waveform-bar h-full"></div>
+                <div className="waveform-bar h-full"></div>
+                <div className="waveform-bar h-full"></div>
               </div>
               <span className="text-sm font-medium">AI-Powered Music Learning</span>
             </div>
@@ -84,7 +74,6 @@ const Hero = () => {
               className="relative group px-8 py-4 rounded-lg font-bold text-lg overflow-hidden transition-all duration-300 border-2 border-cyberpunk-primary bg-cyberpunk-primary/20 hover:border-cyberpunk-primary hover:bg-cyberpunk-primary/30 hover:scale-110 transform"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-cyberpunk-primary/30 to-cyberpunk-secondary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="absolute inset-0 animate-pulse bg-cyberpunk-primary/20"></span>
               <div className="absolute -inset-2 bg-gradient-to-r from-cyberpunk-primary via-cyberpunk-secondary to-cyberpunk-primary opacity-50 blur-lg group-hover:opacity-80 transition-opacity duration-300 rounded-lg"></div>
               <span className="relative z-10 flex items-center gap-2 neon-text">
                 <Music size={20} />
