@@ -17,6 +17,8 @@ const Hero = () => {
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
     iframe.allowFullscreen = true;
     iframe.style.borderRadius = "12px";
+    iframe.style.objectFit = "cover";
+    iframe.style.aspectRatio = "9/16";
     iframe.title = "Music Melodies and Lessons GPT";
     
     // Clear the container and append the iframe
@@ -109,8 +111,8 @@ const Hero = () => {
               <div className="neon-border">
                 <div 
                   ref={videoContainerRef}
-                  className="w-full bg-black rounded-xl overflow-hidden"
-                  style={{ aspectRatio: "9/16", minHeight: "400px", maxHeight: "600px" }}
+                  className="w-full bg-black rounded-xl overflow-hidden relative"
+                  style={{ aspectRatio: "9/16", height: "70vh", maxHeight: "700px", minHeight: "500px" }}
                 >
                   {/* YouTube iframe will be injected here */}
                   <div className="w-full h-full flex items-center justify-center">
