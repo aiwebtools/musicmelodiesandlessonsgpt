@@ -11,7 +11,7 @@ const Hero = () => {
     if (!videoContainer) return;
 
     const iframe = document.createElement('iframe');
-    iframe.src = "https://www.youtube.com/embed/rBQTUrvHcR8?autoplay=1&mute=0&controls=1&modestbranding=1&rel=0&showinfo=0&loop=1&hd=1";
+    iframe.src = "https://www.youtube.com/embed/cKHZ7X0qx_Y?autoplay=1&mute=0&controls=1&modestbranding=1&rel=0&showinfo=0&loop=1&hd=1";
     iframe.width = "100%";
     iframe.height = "100%";
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
