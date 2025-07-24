@@ -31,14 +31,6 @@ const Hero = () => {
     };
   }, []);
 
-  // Smooth scroll function for Learn More button
-  const handleLearnMoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const featuresSection = document.getElementById('features');
-    if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   return (
     <section className="relative pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden">
@@ -87,22 +79,26 @@ const Hero = () => {
                 href="https://chatgpt.com/g/g-HbNtkgAdE-music-melodies-and-lessons-gpt" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="cyberpunk-button group"
+                className="relative group px-8 py-4 rounded-lg font-bold text-lg overflow-hidden transition-all duration-300 border-2 border-cyberpunk-primary bg-cyberpunk-primary/20 hover:border-cyberpunk-primary hover:bg-cyberpunk-primary/30 hover:scale-110 transform"
               >
-                <span className="flex items-center gap-2">
-                  <Music size={16} />
-                  Try It Now
+                <span className="absolute inset-0 bg-gradient-to-r from-cyberpunk-primary/30 to-cyberpunk-secondary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 animate-pulse bg-cyberpunk-primary/20"></span>
+                <div className="absolute -inset-2 bg-gradient-to-r from-cyberpunk-primary via-cyberpunk-secondary to-cyberpunk-primary opacity-50 blur-lg group-hover:opacity-80 transition-opacity duration-300 rounded-lg"></div>
+                <span className="relative z-10 flex items-center gap-2 neon-text">
+                  <Music size={20} />
+                  USE MUSIC MELODIES GPT
                 </span>
               </a>
               
               <a 
-                href="#features" 
-                onClick={handleLearnMoreClick}
-                className="px-6 py-3 rounded-md font-bold border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center gap-2"
-                aria-label="Learn more about our features"
+                href="https://musicvideomakergpt.lovable.app/?via=aiwebtools" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-md font-bold border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center gap-2 hover:scale-105"
+                aria-label="Try Music Video Maker Suite"
               >
                 <Play size={16} />
-                Learn More
+                Music Video Maker Suite
               </a>
             </div>
           </div>
