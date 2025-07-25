@@ -6,39 +6,24 @@ const Hero = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Create YouTube iframes once component mounts
+    // Create YouTube iframe once component mounts
     const videoContainer = videoContainerRef.current;
     if (!videoContainer) return;
 
-    // First video
-    const iframe1 = document.createElement('iframe');
-    iframe1.src = "https://www.youtube.com/embed/cKHZ7X0qx_Y?autoplay=1&mute=0&controls=1&modestbranding=1&rel=0&showinfo=0&loop=1&hd=1&vq=hd1080";
-    iframe1.width = "100%";
-    iframe1.height = "100%";
-    iframe1.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-    iframe1.allowFullscreen = true;
-    iframe1.style.borderRadius = "12px";
-    iframe1.style.objectFit = "cover";
-    iframe1.style.aspectRatio = "9/16";
-    iframe1.title = "Music Melodies and Lessons GPT";
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://www.youtube.com/embed/cKHZ7X0qx_Y?autoplay=1&mute=0&controls=1&modestbranding=1&rel=0&showinfo=0&loop=1&hd=1&vq=hd1080";
+    iframe.width = "100%";
+    iframe.height = "100%";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+    iframe.style.borderRadius = "12px";
+    iframe.style.objectFit = "cover";
+    iframe.style.aspectRatio = "9/16";
+    iframe.title = "Music Melodies and Lessons GPT";
     
-    // Second video
-    const iframe2 = document.createElement('iframe');
-    iframe2.src = "https://www.youtube.com/embed/m2crGAhbs5g?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0&showinfo=0&loop=1&hd=1&vq=hd1080";
-    iframe2.width = "100%";
-    iframe2.height = "100%";
-    iframe2.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-    iframe2.allowFullscreen = true;
-    iframe2.style.borderRadius = "12px";
-    iframe2.style.objectFit = "cover";
-    iframe2.style.aspectRatio = "9/16";
-    iframe2.title = "Music Video Demo";
-    iframe2.style.marginTop = "16px";
-    
-    // Clear the container and append both iframes
+    // Clear the container and append the iframe
     videoContainer.innerHTML = '';
-    videoContainer.appendChild(iframe1);
-    videoContainer.appendChild(iframe2);
+    videoContainer.appendChild(iframe);
 
     return () => {
       // Cleanup on component unmount
