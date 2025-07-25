@@ -90,7 +90,7 @@ const Index = () => {
           <div className="max-w-md mx-auto mb-8">
             <div className="glass-panel p-2 rounded-lg" style={{ boxShadow: '0 0 20px rgba(102, 68, 255, 0.3)' }}>
               <iframe
-                src="https://www.youtube.com/embed/cKHZ7X0qx_Y?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0&showinfo=0&loop=1&hd=1&vq=hd1080"
+                src="https://www.youtube.com/embed/cKHZ7X0qx_Y?autoplay=0&mute=1&controls=1&modestbranding=1&rel=0&showinfo=0&loop=0&hd=1&vq=hd1080"
                 width="100%"
                 height="100%"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
