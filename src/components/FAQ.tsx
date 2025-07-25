@@ -38,35 +38,6 @@ const faqItems = [
 ];
 
 const FAQ = () => {
-  const videoContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Create YouTube iframe once component mounts
-    const videoContainer = videoContainerRef.current;
-    if (!videoContainer) return;
-
-    const iframe = document.createElement('iframe');
-    iframe.src = "https://www.youtube.com/embed/cKHZ7X0qx_Y?autoplay=1&mute=0&controls=1&modestbranding=1&rel=0&showinfo=0&loop=1&hd=1&vq=hd1080";
-    iframe.width = "100%";
-    iframe.height = "100%";
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-    iframe.allowFullscreen = true;
-    iframe.style.borderRadius = "12px";
-    iframe.style.objectFit = "cover";
-    iframe.style.aspectRatio = "9/16";
-    iframe.title = "Music Melodies and Lessons GPT";
-    
-    // Clear the container and append the iframe
-    videoContainer.innerHTML = '';
-    videoContainer.appendChild(iframe);
-
-    return () => {
-      // Cleanup on component unmount
-      if (videoContainer) {
-        videoContainer.innerHTML = '';
-      }
-    };
-  }, []);
 
   return (
     <section id="faq" className="py-20 relative">
@@ -97,40 +68,6 @@ const FAQ = () => {
           </Accordion>
         </div>
         
-        {/* Video Section - moved from Hero */}
-        <div className="flex justify-center mb-12 md:mb-16">
-          <div className="w-full max-w-md mx-auto">
-            <div className="relative">
-              {/* Neon border effect */}
-              <div className="neon-border">
-                <div 
-                  ref={videoContainerRef}
-                  className="w-full bg-black rounded-xl overflow-hidden relative"
-                  style={{ aspectRatio: "9/16", height: "70vh", maxHeight: "700px", minHeight: "500px" }}
-                >
-                  {/* YouTube iframe will be injected here */}
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="animate-spin h-8 w-8 border-4 border-cyberpunk-primary border-t-transparent rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Interactive button below video */}
-            <div className="flex justify-center mt-6">
-              <a 
-                href="https://musicvideomakergpt.lovable.app/?via=aiwebtools" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group px-8 py-4 rounded-lg font-rajdhani font-bold text-lg overflow-hidden transition-all duration-300 border-2 border-cyberpunk-secondary bg-cyberpunk-secondary/20 hover:border-cyberpunk-secondary hover:bg-cyberpunk-secondary/30 hover:scale-110 transform"
-              >
-                <span className="absolute inset-0 bg-gradient-to-r from-cyberpunk-secondary/30 to-cyberpunk-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <div className="absolute -inset-2 bg-gradient-to-r from-cyberpunk-secondary via-cyberpunk-primary to-cyberpunk-secondary opacity-50 blur-lg group-hover:opacity-80 transition-opacity duration-300 rounded-lg"></div>
-                <span className="relative z-10 neon-text-pink">🎬 TRY MUSIC VIDEO MAKER SUITE</span>
-              </a>
-            </div>
-          </div>
-        </div>
         
         <div className="mt-16 p-8 cyberpunk-card max-w-3xl mx-auto">
           <h3 className="text-2xl font-bold mb-4 text-center">Still have questions?</h3>
