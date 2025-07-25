@@ -93,7 +93,7 @@ const Index = () => {
                 src="https://www.youtube.com/embed/cKHZ7X0qx_Y?autoplay=0&mute=1&controls=1&modestbranding=1&rel=0&showinfo=0&loop=0&hd=1&vq=hd1080"
                 width="100%"
                 height="100%"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 style={{
                   borderRadius: "12px",
