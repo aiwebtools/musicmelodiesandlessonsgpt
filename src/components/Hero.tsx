@@ -99,8 +99,19 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Featured Image - moved above video */}
-        <div className="max-w-full md:max-w-4xl mx-auto mb-12 md:mb-20">
+        {/* Video demonstrations */}
+        <div className="max-w-md mx-auto mb-12 md:mb-20">
+          <div 
+            ref={videoContainerRef}
+            className="glass-panel p-2 rounded-lg"
+            style={{ 
+              boxShadow: '0 0 20px rgba(102, 68, 255, 0.3)'
+            }}
+          />
+        </div>
+
+        {/* Featured Image */}
+        <div className="max-w-full md:max-w-4xl mx-auto">
           <div className="glass-panel p-2 overflow-hidden">
             <img 
               src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-digital-advertisement-for-music-melodi_LBv7r.png/:/cr=t:5.43%25,l:0%25,w:100%25,h:89.13%25/rs=w:600,h:300,cg:true/qt=q:33" 
@@ -111,17 +122,6 @@ const Hero = () => {
               }}
             />
           </div>
-        </div>
-
-        {/* Video demonstrations */}
-        <div className="max-w-md mx-auto">
-          <div 
-            ref={videoContainerRef}
-            className="glass-panel p-2 rounded-lg"
-            style={{ 
-              boxShadow: '0 0 20px rgba(102, 68, 255, 0.3)'
-            }}
-          />
         </div>
       </div>
     </section>
