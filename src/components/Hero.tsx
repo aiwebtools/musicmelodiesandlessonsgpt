@@ -18,7 +18,7 @@ const Hero = () => {
     iframe.allowFullscreen = true;
     iframe.style.borderRadius = "12px";
     iframe.style.objectFit = "cover";
-    iframe.style.aspectRatio = "9/16";
+    iframe.style.aspectRatio = "16/9";
     iframe.title = "Music Melodies and Lessons GPT";
     
     // Clear the container and append the iframe
