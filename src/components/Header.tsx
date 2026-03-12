@@ -142,9 +142,8 @@ const Header = () => {
             >
               <span>More AI Tools</span>
             </a>
-          </nav>
-        </div>
-      )}
+        </nav>
+      </div>
     </header>
   );
 };
