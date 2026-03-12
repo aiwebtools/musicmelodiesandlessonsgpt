@@ -139,7 +139,7 @@ const Footer = () => {
           </p>
           
           <a 
-            href="https://www.aiwebtools.ai" 
+            href="https://aiwebtools.lovable.app/?via=aiwebtools" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-6 py-2 rounded-full bg-cyberpunk-gradient bg-opacity-20 border border-white/10 text-white hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
