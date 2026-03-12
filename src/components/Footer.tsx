@@ -109,7 +109,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-cyberpunk-primary transition-colors flex items-center gap-1"
@@ -120,7 +120,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://www.aiwebtools.ai" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-cyberpunk-secondary transition-colors flex items-center gap-1"
@@ -135,11 +135,11 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © 2025 <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">AI WEB TOOLS LLC</a> All rights reserved.
+            © 2025 <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">AI WEB TOOLS LLC</a> All rights reserved.
           </p>
           
           <a 
-            href="https://www.aiwebtools.ai" 
+            href="https://aiwebtools.lovable.app/?via=aiwebtools" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-6 py-2 rounded-full bg-cyberpunk-gradient bg-opacity-20 border border-white/10 text-white hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"

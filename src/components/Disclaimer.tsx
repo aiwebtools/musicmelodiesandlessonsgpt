@@ -55,7 +55,7 @@ const Disclaimer = () => {
                   Privacy Policy
                 </a>
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-cyberpunk-primary hover:underline"
