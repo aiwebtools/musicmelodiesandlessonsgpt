@@ -90,8 +90,12 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-cyberpunk-background/95 backdrop-blur-lg border-b border-white/10 py-4">
+      <div 
+        className={cn(
+          "md:hidden absolute top-full left-0 right-0 bg-cyberpunk-background/95 backdrop-blur-lg border-b border-white/10 py-4 transition-all duration-200 ease-out",
+          mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
+        )}
+      >
           <nav className="container mx-auto px-4 flex flex-col space-y-4">
             <a 
               href="https://chatgpt.com/g/g-HbNtkgAdE-music-melodies-and-lessons-gpt" 
